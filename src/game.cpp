@@ -2,10 +2,10 @@
 
 game::game()
     : window(sf::VideoMode({800, 600}), "Game of Life"),
-      tile(0, 0) // <-- координаты сетки
+      tile(0, 0)
 {
     window.setFramerateLimit(60);
-    tile.init(); // Генерация случайного поля
+    tile.init();
 }
 
 void game::run() {
