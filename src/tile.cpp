@@ -7,7 +7,7 @@ tile::tile(int x, int y) {
     tilex = x;
     tiley = y;
     grid.resize(gridHeight, std::vector<int>(gridWidth, 0));
-    nextGrid.resize(gridHeight, std::vector<int>(gridWidth, 0)); // ← добавь это!
+    nextGrid.resize(gridHeight, std::vector<int>(gridWidth, 0));
     std::srand(std::time(nullptr));
 }
 
@@ -18,6 +18,14 @@ void tile::init() {
             
         }
     }
+}
+
+int tile::getX(){
+    return gridWidth;
+}
+
+int tile::getY(){
+    return gridHeight;
 }
 
 void tile::update() {

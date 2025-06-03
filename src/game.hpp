@@ -12,6 +12,7 @@ private:
     void render();
     sf::Clock clock;
     sf::Clock updateTile;
+    sf::View view;
     float deltaTime;
 
     sf::RenderWindow window;
