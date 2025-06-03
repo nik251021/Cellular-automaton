@@ -27,11 +27,11 @@ void game::handleEvents() {
 
 void game::update() {
     deltaTime = clock.restart().asSeconds();
-    tile.update(deltaTime);
     float delta = updateTile.getElapsedTime().asSeconds();
     if (delta >= 1) {
         std::cout << "Do" << std::endl;
         updateTile.restart();
+        tile.update();
     }
 }
 

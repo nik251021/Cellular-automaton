@@ -11,10 +11,11 @@ private:
     int gridWidth = 50;
     int gridHeight = 50;
     std::vector<std::vector<int>> grid;
+    std::vector<std::vector<int>> nextGrid;
 
 public:
     tile(int x, int y);
     void init();
-    void update(float dt);
+    void update();
     void draw(sf::RenderWindow& window);
 };
