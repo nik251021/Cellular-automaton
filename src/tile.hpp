@@ -15,6 +15,6 @@ private:
 public:
     tile(int x, int y);
     void init();
-    void update();
+    void update(float dt);
     void draw(sf::RenderWindow& window);
 };

@@ -10,6 +10,9 @@ private:
     void handleEvents();
     void update();
     void render();
+    sf::Clock clock;
+    sf::Clock updateTile;
+    float deltaTime;
 
     sf::RenderWindow window;
     tile tile;

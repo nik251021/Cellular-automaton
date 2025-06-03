@@ -19,6 +19,10 @@ void tile::init() {
     }
 }
 
+void tile::update(float dt) {
+    
+}
+
 void tile::draw(sf::RenderWindow& window) {
     const float SquareSize = 10.0f;
     for (int y = 0; y < gridHeight; ++y) {

@@ -1,4 +1,5 @@
 #include "game.hpp"
+#include <iostream>
 
 game::game()
     : window(sf::VideoMode({800, 600}), "Game of Life"),
@@ -25,7 +26,13 @@ void game::handleEvents() {
 }
 
 void game::update() {
-    
+    deltaTime = clock.restart().asSeconds();
+    tile.update(deltaTime);
+    float delta = updateTile.getElapsedTime().asSeconds();
+    if (delta >= 1) {
+        std::cout << "Do" << std::endl;
+        updateTile.restart();
+    }
 }
 
 void game::render() {
