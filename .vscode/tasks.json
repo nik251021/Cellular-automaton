@@ -2,22 +2,28 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Скомпилировать проект SFML (main + game)",
+      "label": "Скомпилировать проект SFML (main + game, статически)",
       "type": "shell",
       "command": "g++",
       "args": [
         "-std=c++17",
         "-g",
-        "D:/projects/CLangProjects/cellularautomatonSFML/src/main.cpp",
-        "D:/projects/CLangProjects/cellularautomatonSFML/src/game.cpp",
-        "D:/projects/CLangProjects/cellularautomatonSFML/src/tile.cpp",
+        "D:/projects/CLangProjects/paintSFML/src/main.cpp",
+        "D:/projects/CLangProjects/paintSFML/src/game.cpp",
+        "D:/projects/CLangProjects/paintSFML/src/paint.cpp",
         "-IC:/SFML-3.0.0/include",
         "-LC:/SFML-3.0.0/lib",
-        "-lsfml-graphics",
-        "-lsfml-window",
-        "-lsfml-system",
+        "-DSFML_STATIC",
+        "-static",
+        "-lsfml-graphics-s",
+        "-lsfml-window-s",
+        "-lsfml-system-s",
+        "-lfreetype",
+        "-lopengl32",
+        "-lwinmm",
+        "-lgdi32",
         "-o",
-        "D:/projects/CLangProjects/cellularautomatonSFML/build/main.exe"
+        "D:/projects/CLangProjects/paintSFML/build/main.exe"
       ],
       "group": {
         "kind": "build",
